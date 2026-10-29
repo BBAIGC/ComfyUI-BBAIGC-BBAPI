@@ -4,7 +4,7 @@
 
 ### 文生图 · 图生图 · 多图参考 · 批量并发
 
-![版本](https://img.shields.io/badge/版本-V1.1.1-1677ff?style=flat-square)
+![版本](https://img.shields.io/badge/版本-V1.1.2-1677ff?style=flat-square)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-API_生图-18181b?style=flat-square)
 ![BBAPI](https://img.shields.io/badge/BBAPI-多模型接口-7c3aed?style=flat-square)
 ![Batch](https://img.shields.io/badge/批量-有界并发-16a34a?style=flat-square)

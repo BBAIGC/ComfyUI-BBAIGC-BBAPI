@@ -1,12 +1,12 @@
 {
   "id": "bbapi",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "BBAIGC",
-  "workflow": "workflows/BBAIGC_bbapi_V1.1.1.json",
-  "sha256": "02ffc01893d962cb3600859017f37a654e74743c355cf5ecda135b9e891427d2",
+  "workflow": "workflows/BBAIGC_bbapi_V1.1.2.json",
+  "sha256": "9dd3ae5c2db37ca214e61132914a9e25499a99998495c0921a683dcaf3f4944c",
   "node_versions": {
-    "core": "1.2.2",
-    "bbapi": "1.1.1"
+    "core": "1.2.3",
+    "bbapi": "1.1.2"
   },
-  "notes": "BBAIGC 标识、脱敏工作流、安装说明及版本更新支持。"
+  "notes": "自动读取图像模型、分类与版本切换、独立云端参数、语音输入与本机密钥配置。"
 }
