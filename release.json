@@ -1,0 +1,12 @@
+{
+  "id": "bbapi",
+  "version": "1.1.1",
+  "author": "BBAIGC",
+  "workflow": "workflows/BBAIGC_bbapi_V1.1.1.json",
+  "sha256": "84be814db2fd26291b6b6b0914a5f867e84e22a08cf1b55897b01bdf49b0431c",
+  "node_versions": {
+    "core": "1.2.2",
+    "bbapi": "1.1.1"
+  },
+  "notes": "BBAIGC 标识、脱敏工作流、安装说明及版本更新支持。"
+}
