@@ -2,9 +2,9 @@
 
 # BBAIGC BBAPI 生图工作台
 
-### 文生图 · 图生图 · 多图参考 · 批量并发
+### 云端生图与多图编辑，批量任务集中完成
 
-![版本](https://img.shields.io/badge/版本-V1.1.2-1677ff?style=flat-square)
+![版本](https://img.shields.io/badge/版本-V1.1.3-1677ff?style=flat-square)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-API_生图-18181b?style=flat-square)
 ![BBAPI](https://img.shields.io/badge/BBAPI-多模型接口-7c3aed?style=flat-square)
 ![Batch](https://img.shields.io/badge/批量-有界并发-16a34a?style=flat-square)
@@ -13,7 +13,23 @@
 
 </div>
 
-**把云端图片生成接入 ComfyUI：集中管理连接、参考图、批量请求与结果。** 基础生图无需下载本地图像模型，也不要求 NVIDIA 显卡；需要本地提示词优化、修复或超分时，再添加对应模型。
+**把 GPT Image、Grok 等接口开放的图像模型，变成一套可批量使用的 ComfyUI 工作台。** 连接后自动读取可用图像模型，按类别和版本切换；文字或语音输入需求，集中处理文生图、图生图、多图编辑、批量候选与文件夹任务。
+
+> [!TIP]
+> **基础云端生图无需下载本地图像大模型，也不要求 NVIDIA 显卡。** 普通电脑可通过自己的接口密钥使用云端图像模型，本地提示词优化、修复和超分按需增加。
+
+## 最值得用它的四个理由
+
+| 核心特点 | 使用时的好处 |
+|---|---|
+| **连接后自动找图像模型** | 按实际返回的 GPT Image、Grok 等类别和版本横向选择，展示对应云端参数 |
+| **一份需求，批量出候选** | 单批最多 16 个生成任务，可设置并发上限，按请求编号整理结果与失败信息 |
+| **一整个文件夹接着处理** | 单次可安排最多 500 张图片逐张处理；保留已有结果，后续继续，减少重复劳动 |
+| **多图编辑也能接回本地工作流** | 支持集中上传和外接 IMAGE，最多接入 16 张参考图；云端出图后可继续接本地修复、超分与对比 |
+
+输入框内有连续语音录入，文字可按光标位置插入或替换选区。密钥保存在本机配置中；已有结果与未确认请求分别记录，避免把一次超时当作可以直接重复提交的请求。
+
+[**BBAPI Key 获取**](https://bbapi.ainivox.cn) · **GPT2.5 模型低至 0.025／张**（作者提供的价格参考，实际可用模型与费用以站点为准）。
 
 ![BBAIGC BBAPI 生图工作台总览](docs/assets/workflow-overview.jpg)
 
@@ -47,23 +63,19 @@
 
 ## 智能体开箱即用 · 复制即装
 
-支持 **Codex、Claude Code、Cursor、Windsurf、Trae、通义灵码、CodeBuddy** 等具备本地工具权限的智能体。点击代码块右上角复制按钮，粘贴后即可交给智能体完成环境识别、依赖安装、模型下载与部署检查。
-
-<details>
-<summary><strong>智能体开箱即用 · 复制即装</strong></summary>
+支持 **Codex、Claude Code、Cursor、Windsurf、Trae、通义灵码、CodeBuddy** 等具备本地工具权限的智能体。直接复制下面完整代码块，粘贴到智能体输入框。GitHub 的复制按钮在代码块右上角，移入代码块即可看到。智能体会识别环境、检查硬件、准备依赖与所选模型，并完成部署检查。
 
 ```text
 请在我的电脑上安装 BBAIGC「BBAPI 生图工作台」。
 仓库：https://github.com/BBAIGC/ComfyUI-BBAIGC-BBAPI
 
 先读取仓库的 README.md、MODELS.md、AGENT_INSTALL.md 和 release.json，再按照 AGENT_INSTALL.md 的完整步骤直接完成部署。自动找到我实际使用的 ComfyUI、Python 环境、模型与用户目录，保留现有模型、提示词、密钥和输出。复用已安装的共享节点，避免重复注册；按 MODELS.md 的来源、精确文件名、大小和位置下载真正需要的模型。不要盲目重装或降级已可工作的 PyTorch，不要把私有密钥写入工作流或上传仓库。
-如果尚未指定模型方案，请在识别硬件后一次性让我选择：A作者同款（图片UC Q6_K与作者配套编码器/VAE，H3采用有公开来源的基础INT8+官方8步LoRA）；B按本机显存/内存适配的同架构量化；C高配更高精度；D作者同款再加一个适配版本。说明各方案的真实下载体积、兼容性和取舍后再下载；我已明确指定时直接按指定方案，禁止默认全部下载。
+基础云端生图无需下载本地图像或H3视频模型，先安装API节点与工作流；语音使用本地SenseVoice。只有我选择本地提示词优化、修复或超分时，再检查硬件并按MODELS.md选择对应模型，复用已有权重，禁止默认下载全部模型。
 完成依赖、工作流部署和无付费、无推理的加载检查，告诉我实际安装位置、版本、可用入口与缺失项。需要登录、验证码或接受模型许可时再让我操作；其他可自动完成的部分直接继续。
 ```
 
 [完整安装提示词与细节 →](AGENT_INSTALL.md)
 
-</details>
 
 也可手动安装：先阅读 [模型与节点清单](MODELS.md)，将节点仓库安装到当前 ComfyUI 的 `custom_nodes`，在对应 Python 环境安装 `requirements.txt`，把公开工作流导入 `user/default/workflows/BBAIGC`，随后重启并检查是否缺失节点。图片工作流仓库是工作流包，实际共享运行节点来自 H3 仓库。
 

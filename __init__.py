@@ -1,5 +1,5 @@
-"""BBAIGC BBAPI image nodes. Version V1.1.2."""
-__version__ = "1.1.2"
+"""BBAIGC BBAPI image nodes. Version V1.1.3."""
+__version__ = "1.1.3"
 
 NODE_CLASS_MAPPINGS = {}
 NODE_DISPLAY_NAME_MAPPINGS = {}

@@ -1,12 +1,12 @@
 {
   "id": "bbapi",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "author": "BBAIGC",
-  "workflow": "workflows/BBAIGC_bbapi_V1.1.2.json",
-  "sha256": "9dd3ae5c2db37ca214e61132914a9e25499a99998495c0921a683dcaf3f4944c",
+  "workflow": "workflows/BBAIGC_bbapi_V1.1.3.json",
+  "sha256": "b54be21b2aab9e0639a9c8670bf5ca2f27a29e554f58f6da957c7f0462043cef",
   "node_versions": {
-    "core": "1.2.3",
-    "bbapi": "1.1.2"
+    "core": "1.2.4",
+    "bbapi": "1.1.3"
   },
-  "notes": "自动读取图像模型、分类与版本切换、独立云端参数、语音输入与本机密钥配置。"
+  "notes": "共享节点更新；首页突出云端批量工作台、续接任务与默认展开的智能体安装提示词。"
 }
