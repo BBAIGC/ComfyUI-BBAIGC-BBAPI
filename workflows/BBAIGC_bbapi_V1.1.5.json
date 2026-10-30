@@ -1,0 +1,2246 @@
+{
+  "revision": 0,
+  "last_node_id": 36,
+  "last_link_id": 615,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "BBAPIConnection",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        340,
+        470
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "配置名称",
+          "name": "配置名称",
+          "type": "STRING",
+          "widget": {
+            "name": "配置名称"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "接口地址",
+          "name": "接口地址",
+          "type": "STRING",
+          "widget": {
+            "name": "接口地址"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "默认模型",
+          "name": "默认模型",
+          "type": "STRING",
+          "widget": {
+            "name": "默认模型"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "超时秒",
+          "name": "超时秒",
+          "type": "INT",
+          "widget": {
+            "name": "超时秒"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "连接",
+          "name": "连接",
+          "type": "BBAPI_CONNECTION",
+          "links": [
+            1,
+            2,
+            4,
+            606
+          ]
+        },
+        {
+          "localized_name": "状态",
+          "name": "状态",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "连接配置 · 密钥只存本机",
+      "properties": {
+        "Node name for S&R": "BBAPIConnection",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "配置名称": true,
+            "接口地址": true,
+            "默认模型": true,
+            "超时秒": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "default",
+        "https://bbapi.ainivox.cn",
+        "gpt-image-2.5-flare",
+        300
+      ]
+    },
+    {
+      "id": 2,
+      "type": "Fast Groups Muter (rgthree)",
+      "pos": [
+        0,
+        500
+      ],
+      "size": [
+        340,
+        170
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "可选连接",
+          "localized_name": "可选连接",
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": []
+        }
+      ],
+      "title": "只启用一个生图组",
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "^(文生图|图生图|多图参考)$",
+        "showNav": false,
+        "showAllGraphs": false,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "always one",
+        "Node name for S&R": "Fast Groups Muter (rgthree)",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "BBAPIReferences",
+      "pos": [
+        0,
+        960
+      ],
+      "size": [
+        340,
+        300
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "图片文件",
+          "name": "图片文件",
+          "type": "STRING",
+          "widget": {
+            "name": "图片文件"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "参考图",
+          "name": "参考图",
+          "type": "BBAPI_REFERENCES",
+          "links": []
+        }
+      ],
+      "title": "参考图总入口 · 上传/拖入/排序",
+      "properties": {
+        "Node name for S&R": "BBAPIReferences",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "图片文件": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "[]"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "BBAPIPromptToImage",
+      "pos": [
+        400,
+        0
+      ],
+      "size": [
+        480,
+        920
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "连接",
+          "name": "连接",
+          "type": "BBAPI_CONNECTION",
+          "link": 1
+        },
+        {
+          "localized_name": "模型",
+          "name": "模型",
+          "type": "STRING",
+          "widget": {
+            "name": "模型"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "提示词",
+          "name": "提示词",
+          "type": "STRING",
+          "widget": {
+            "name": "提示词"
+          },
+          "link": 613
+        },
+        {
+          "localized_name": "分辨率",
+          "name": "分辨率",
+          "type": "COMBO",
+          "widget": {
+            "name": "分辨率"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "比例",
+          "name": "比例",
+          "type": "COMBO",
+          "widget": {
+            "name": "比例"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "批量数量",
+          "name": "批量数量",
+          "type": "INT",
+          "widget": {
+            "name": "批量数量"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "并发上限",
+          "name": "并发上限",
+          "type": "INT",
+          "widget": {
+            "name": "并发上限"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "质量",
+          "name": "质量",
+          "type": "COMBO",
+          "widget": {
+            "name": "质量"
+          },
+          "link": null
+        },
+        {
+          "name": "输出模式",
+          "type": "COMBO",
+          "widget": {
+            "name": "输出模式"
+          },
+          "link": null
+        },
+        {
+          "name": "重新生成编号",
+          "type": "INT",
+          "widget": {
+            "name": "重新生成编号"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "图片列表",
+          "name": "全部生成图",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            607
+          ]
+        },
+        {
+          "localized_name": "报告",
+          "name": "报告",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "第一张生成图",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 2
+        },
+        {
+          "name": "生成图作参考",
+          "type": "BBAPI_REFERENCES",
+          "links": [],
+          "slot_index": 3
+        },
+        {
+          "name": "输入参考图",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 4
+        }
+      ],
+      "title": "文生图 · 提示词与结果",
+      "properties": {
+        "Node name for S&R": "BBAPIPromptToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "模型": true,
+            "提示词": true,
+            "分辨率": true,
+            "比例": true,
+            "批量数量": true,
+            "并发上限": true,
+            "质量": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "2K",
+        "3:4",
+        1,
+        2,
+        "省费",
+        [
+          false,
+          true
+        ],
+        "保存并预览",
+        0
+      ]
+    },
+    {
+      "id": 11,
+      "type": "BBAPIImageToImage",
+      "pos": [
+        960,
+        0
+      ],
+      "size": [
+        480,
+        920
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 2,
+      "inputs": [
+        {
+          "localized_name": "连接",
+          "name": "连接",
+          "type": "BBAPI_CONNECTION",
+          "link": 2
+        },
+        {
+          "localized_name": "参考图",
+          "name": "参考图",
+          "shape": 7,
+          "type": "BBAPI_REFERENCES",
+          "link": 601
+        },
+        {
+          "localized_name": "上游图片",
+          "name": "上游图片",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "模型",
+          "name": "模型",
+          "type": "STRING",
+          "widget": {
+            "name": "模型"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "提示词",
+          "name": "提示词",
+          "type": "STRING",
+          "widget": {
+            "name": "提示词"
+          },
+          "link": 614
+        },
+        {
+          "localized_name": "分辨率",
+          "name": "分辨率",
+          "type": "COMBO",
+          "widget": {
+            "name": "分辨率"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "比例",
+          "name": "比例",
+          "type": "COMBO",
+          "widget": {
+            "name": "比例"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "批量数量",
+          "name": "批量数量",
+          "type": "INT",
+          "widget": {
+            "name": "批量数量"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "并发上限",
+          "name": "并发上限",
+          "type": "INT",
+          "widget": {
+            "name": "并发上限"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "质量",
+          "name": "质量",
+          "type": "COMBO",
+          "widget": {
+            "name": "质量"
+          },
+          "link": null
+        },
+        {
+          "name": "输出模式",
+          "type": "COMBO",
+          "widget": {
+            "name": "输出模式"
+          },
+          "link": null
+        },
+        {
+          "name": "重新生成编号",
+          "type": "INT",
+          "widget": {
+            "name": "重新生成编号"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "图片列表",
+          "name": "全部生成图",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            608
+          ]
+        },
+        {
+          "localized_name": "报告",
+          "name": "报告",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "第一张生成图",
+          "type": "IMAGE",
+          "links": [
+            605
+          ],
+          "slot_index": 2
+        },
+        {
+          "name": "生成图作参考",
+          "type": "BBAPI_REFERENCES",
+          "links": [],
+          "slot_index": 3
+        },
+        {
+          "name": "输入参考图",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 4
+        }
+      ],
+      "title": "图生图 · 上传1张参考图",
+      "properties": {
+        "Node name for S&R": "BBAPIImageToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "模型": true,
+            "提示词": true,
+            "分辨率": true,
+            "比例": true,
+            "批量数量": true,
+            "并发上限": true,
+            "质量": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "1K",
+        "1:1",
+        1,
+        2,
+        "省费",
+        [
+          false,
+          true
+        ],
+        "保存并预览",
+        0
+      ]
+    },
+    {
+      "id": 12,
+      "type": "BBAPIMultiReference",
+      "pos": [
+        1520,
+        0
+      ],
+      "size": [
+        480,
+        920
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 2,
+      "inputs": [
+        {
+          "localized_name": "连接",
+          "name": "连接",
+          "type": "BBAPI_CONNECTION",
+          "link": 4
+        },
+        {
+          "localized_name": "参考图",
+          "name": "参考图",
+          "shape": 7,
+          "type": "BBAPI_REFERENCES",
+          "link": 602
+        },
+        {
+          "localized_name": "上游图片批次",
+          "name": "上游图片批次",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "模型",
+          "name": "模型",
+          "type": "STRING",
+          "widget": {
+            "name": "模型"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "提示词",
+          "name": "提示词",
+          "type": "STRING",
+          "widget": {
+            "name": "提示词"
+          },
+          "link": 615
+        },
+        {
+          "localized_name": "分辨率",
+          "name": "分辨率",
+          "type": "COMBO",
+          "widget": {
+            "name": "分辨率"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "比例",
+          "name": "比例",
+          "type": "COMBO",
+          "widget": {
+            "name": "比例"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "批量数量",
+          "name": "批量数量",
+          "type": "INT",
+          "widget": {
+            "name": "批量数量"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "并发上限",
+          "name": "并发上限",
+          "type": "INT",
+          "widget": {
+            "name": "并发上限"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "质量",
+          "name": "质量",
+          "type": "COMBO",
+          "widget": {
+            "name": "质量"
+          },
+          "link": null
+        },
+        {
+          "name": "输出模式",
+          "type": "COMBO",
+          "widget": {
+            "name": "输出模式"
+          },
+          "link": null
+        },
+        {
+          "name": "重新生成编号",
+          "type": "INT",
+          "widget": {
+            "name": "重新生成编号"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "图片列表",
+          "name": "全部生成图",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            609
+          ]
+        },
+        {
+          "localized_name": "报告",
+          "name": "报告",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "第一张生成图",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 2
+        },
+        {
+          "name": "生成图作参考",
+          "type": "BBAPI_REFERENCES",
+          "links": [],
+          "slot_index": 3
+        },
+        {
+          "name": "输入参考图",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 4
+        }
+      ],
+      "title": "多图参考 · 最多16张",
+      "properties": {
+        "Node name for S&R": "BBAPIMultiReference",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "模型": true,
+            "提示词": true,
+            "分辨率": true,
+            "比例": true,
+            "批量数量": true,
+            "并发上限": true,
+            "质量": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "1K",
+        "1:1",
+        1,
+        2,
+        "省费",
+        [
+          false,
+          true
+        ],
+        "保存并预览",
+        0
+      ]
+    },
+    {
+      "id": 20,
+      "type": "BBAPIReferenceInputs",
+      "pos": [
+        0,
+        740
+      ],
+      "size": [
+        340,
+        100
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "参考图1",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "参考图集合",
+          "type": "BBAPI_REFERENCES",
+          "links": [
+            601,
+            602,
+            603
+          ]
+        },
+        {
+          "name": "参考图逐张",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BBAPIReferenceInputs",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 21,
+      "type": "BBAPIReferenceSelect",
+      "pos": [
+        0,
+        1320
+      ],
+      "size": [
+        340,
+        110
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "参考图",
+          "type": "BBAPI_REFERENCES",
+          "link": 603
+        }
+      ],
+      "outputs": [
+        {
+          "name": "所选参考图",
+          "type": "IMAGE",
+          "links": [
+            604
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BBAPIReferenceSelect",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 22,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        2110,
+        980
+      ],
+      "size": [
+        350,
+        420
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 52,
+      "mode": 2,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 604
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 605
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "images",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "version": "7.8",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "cnr_id": "rgthree-comfy",
+        "ver": "ab37a0bd377a4443d04896b34a9491ddb1cb014b"
+      },
+      "widgets_values": [],
+      "title": "所选参考 / 生成结果"
+    },
+    {
+      "id": 23,
+      "type": "BBAPIFolderBatch",
+      "pos": [
+        2110,
+        1500
+      ],
+      "size": [
+        390,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 23,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "连接",
+          "type": "BBAPI_CONNECTION",
+          "link": 606
+        },
+        {
+          "name": "固定参考图",
+          "type": "BBAPI_REFERENCES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "生成图逐张",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "批处理报告",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BBAPIFolderBatch",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "自动（2.5优先）",
+        "",
+        "2K",
+        "跟随参考图1",
+        "省费",
+        "",
+        100,
+        "",
+        false
+      ]
+    },
+    {
+      "id": 24,
+      "type": "MarkdownNote",
+      "pos": [
+        0,
+        1470
+      ],
+      "size": [
+        340,
+        250
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "properties": {},
+      "widgets_values": [
+        "BBAIGC · 使用方法、模型目录与智能体安装提示词见仓库 README。"
+      ],
+      "title": "BBAIGC 使用说明"
+    },
+    {
+      "id": 25,
+      "type": "Any Switch (rgthree)",
+      "title": "当前生成图 · 自动选择",
+      "pos": [
+        2110,
+        300
+      ],
+      "size": [
+        320,
+        95
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "any_01",
+          "label": "本次输出优先",
+          "type": "IMAGE",
+          "link": 607
+        },
+        {
+          "name": "any_02",
+          "label": "已有内容备用",
+          "type": "IMAGE",
+          "link": 608
+        },
+        {
+          "name": "any_03",
+          "label": "多图参考结果",
+          "type": "IMAGE",
+          "link": 609
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            610
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Any Switch (rgthree)"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 26,
+      "type": "CodexImageRepair",
+      "pos": [
+        2470,
+        40
+      ],
+      "size": [
+        340,
+        900
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "图像",
+          "type": "IMAGE",
+          "link": 610
+        },
+        {
+          "name": "启用修复",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "启用修复"
+          }
+        },
+        {
+          "name": "修复规则",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "修复规则"
+          }
+        },
+        {
+          "name": "补充要求",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "补充要求"
+          }
+        },
+        {
+          "name": "种子",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "种子"
+          }
+        },
+        {
+          "name": "图像模型配置",
+          "type": "H3_IMAGE_SETTINGS",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "目标宽度",
+          "type": "INT",
+          "link": null,
+          "shape": 7,
+          "widget": {
+            "name": "目标宽度"
+          }
+        },
+        {
+          "name": "目标高度",
+          "type": "INT",
+          "link": null,
+          "shape": 7,
+          "widget": {
+            "name": "目标高度"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "修复或直通图像",
+          "type": "IMAGE",
+          "links": [
+            611
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "可选修复 · 默认关闭",
+      "properties": {
+        "Node name for S&R": "CodexImageRepair",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        false,
+        "仅修复可见的不合理五官、手指、脚部、肢体比例、接触遮挡和衣物破损或接缝错误。保留同一人物身份、脸型、正常身体结构、原姿态、服装覆盖、构图、场景、光照及自然肤质。没有明确错误的位置维持原样，不改变服装覆盖，不增加人物或物件，不磨皮，不添加文字。",
+        "",
+        42,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 27,
+      "type": "CodexImageUpscale",
+      "pos": [
+        2880,
+        40
+      ],
+      "size": [
+        340,
+        460
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "图像",
+          "type": "IMAGE",
+          "link": 611
+        },
+        {
+          "name": "超分路线",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "超分路线"
+          }
+        },
+        {
+          "name": "总倍率",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "总倍率"
+          }
+        },
+        {
+          "name": "DLSS倍率",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "DLSS倍率"
+          }
+        },
+        {
+          "name": "VOSR倍率",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "VOSR倍率"
+          }
+        },
+        {
+          "name": "种子",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "种子"
+          }
+        },
+        {
+          "name": "色彩校正",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "色彩校正"
+          }
+        },
+        {
+          "name": "图像分块",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "图像分块"
+          }
+        },
+        {
+          "name": "分块重叠",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "分块重叠"
+          }
+        },
+        {
+          "name": "VAE分块",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "VAE分块"
+          }
+        },
+        {
+          "name": "VAE重叠",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "VAE重叠"
+          }
+        },
+        {
+          "name": "Seed模型",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "Seed模型"
+          }
+        },
+        {
+          "name": "输入噪声",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "输入噪声"
+          }
+        },
+        {
+          "name": "潜空间噪声",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "潜空间噪声"
+          }
+        },
+        {
+          "name": "交换层数",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "交换层数"
+          }
+        },
+        {
+          "name": "DLSS强度",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "DLSS强度"
+          }
+        },
+        {
+          "name": "DLSS结构",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "DLSS结构"
+          }
+        },
+        {
+          "name": "DLSS色彩",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "DLSS色彩"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "超分或直通图像",
+          "type": "IMAGE",
+          "links": [
+            612
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "可选超分 · 默认关闭",
+      "properties": {
+        "Node name for S&R": "CodexImageUpscale",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "关闭",
+        2,
+        1,
+        2,
+        42,
+        "wavelet",
+        512,
+        64,
+        1024,
+        128,
+        "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
+        0,
+        0,
+        0,
+        1,
+        1.5,
+        1
+      ]
+    },
+    {
+      "id": 28,
+      "type": "CodexImageOutput",
+      "pos": [
+        3290,
+        40
+      ],
+      "size": [
+        360,
+        250
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "图像",
+          "type": "IMAGE",
+          "link": 612
+        },
+        {
+          "name": "输出模式",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "输出模式"
+          }
+        },
+        {
+          "name": "文件名前缀",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "文件名前缀"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "图像",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "输出报告",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "title": "输出模式 · 预览 / 保存并预览",
+      "properties": {
+        "Node name for S&R": "CodexImageOutput",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "保存并预览",
+        "BBAPI/后处理"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "CodexWorkflowControls",
+      "pos": [
+        -480,
+        40
+      ],
+      "size": [
+        430,
+        576
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "控件映射",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "控件映射"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "后处理统一控制",
+      "properties": {
+        "Node name for S&R": "CodexWorkflowControls",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "{\"fields\": [{\"node\": 26, \"widget\": \"启用修复\", \"label\": \"启用修复\"}, {\"node\": 27, \"widget\": \"超分路线\", \"label\": \"超分路线\"}, {\"node\": 27, \"widget\": \"总倍率\", \"label\": \"总倍率\"}, {\"node\": 26, \"widget\": \"种子\", \"label\": \"修复种子\"}, {\"node\": 26, \"widget\": \"目标宽度\", \"label\": \"修复宽度\"}, {\"node\": 26, \"widget\": \"目标高度\", \"label\": \"修复高度\"}, {\"node\": 27, \"widget\": \"DLSS倍率\", \"label\": \"DLSS倍率\"}, {\"node\": 27, \"widget\": \"VOSR倍率\", \"label\": \"VOSR倍率\"}, {\"node\": 27, \"widget\": \"色彩校正\", \"label\": \"色彩校正\"}, {\"node\": 27, \"widget\": \"图像分块\", \"label\": \"图像分块\"}, {\"node\": 27, \"widget\": \"分块重叠\", \"label\": \"分块重叠\"}, {\"node\": 27, \"widget\": \"VAE分块\", \"label\": \"VAE分块\"}, {\"node\": 27, \"widget\": \"VAE重叠\", \"label\": \"VAE重叠\"}, {\"node\": 27, \"widget\": \"DLSS强度\", \"label\": \"DLSS强度\"}, {\"node\": 27, \"widget\": \"DLSS结构\", \"label\": \"DLSS结构\"}, {\"node\": 27, \"widget\": \"DLSS色彩\", \"label\": \"DLSS色彩\"}]}"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "CodexPromptOptimize",
+      "pos": [
+        400,
+        1080
+      ],
+      "size": [
+        480,
+        760
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "原始提示词",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "原始提示词"
+          }
+        },
+        {
+          "name": "启用优化",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "启用优化"
+          }
+        },
+        {
+          "name": "目标模型",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "目标模型"
+          }
+        },
+        {
+          "name": "语言模型",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "语言模型"
+          }
+        },
+        {
+          "name": "前置规则",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "前置规则"
+          }
+        },
+        {
+          "name": "输出上限",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "输出上限"
+          }
+        },
+        {
+          "name": "上下文",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "上下文"
+          }
+        },
+        {
+          "name": "温度",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "温度"
+          }
+        },
+        {
+          "name": "top_p",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "top_p"
+          }
+        },
+        {
+          "name": "详细程度",
+          "type": "INT",
+          "shape": 7,
+          "widget": {
+            "name": "详细程度"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "最终生图提示词",
+          "type": "STRING",
+          "links": [
+            613
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "千问提示词优化 · 可选",
+      "properties": {
+        "Node name for S&R": "CodexPromptOptimize",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "",
+        false,
+        "GPT Image 2/2.5",
+        "qwen3.5:9b",
+        "将用户输入整理为目标生图模型能准确执行的提示词，只输出最终提示词。保留主体、身份、数量、动作、表情、衣物覆盖、物体关系、画面左右、环境、构图、光照和明确限制。参考图1、图2、@图1等来源编号必须保持，不互换角色或添加未要求的人物、物件、剧情。用户中文输入默认输出中文，指定要出现在图上的文字逐字保留。去掉重复措辞和不适用于该模型的标签，但不删除关键需求；看不清或未给出的细节不要编造。不要输出分析、标题、解释、对白时间轴、帧率、S编号或视频镜头运动。",
+        1536,
+        8192,
+        0.15,
+        0.9,
+        3
+      ]
+    },
+    {
+      "id": 31,
+      "type": "CodexPromptOptimize",
+      "pos": [
+        960,
+        1080
+      ],
+      "size": [
+        480,
+        760
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "原始提示词",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "原始提示词"
+          }
+        },
+        {
+          "name": "启用优化",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "启用优化"
+          }
+        },
+        {
+          "name": "目标模型",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "目标模型"
+          }
+        },
+        {
+          "name": "语言模型",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "语言模型"
+          }
+        },
+        {
+          "name": "前置规则",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "前置规则"
+          }
+        },
+        {
+          "name": "输出上限",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "输出上限"
+          }
+        },
+        {
+          "name": "上下文",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "上下文"
+          }
+        },
+        {
+          "name": "温度",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "温度"
+          }
+        },
+        {
+          "name": "top_p",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "top_p"
+          }
+        },
+        {
+          "name": "详细程度",
+          "type": "INT",
+          "shape": 7,
+          "widget": {
+            "name": "详细程度"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "最终生图提示词",
+          "type": "STRING",
+          "links": [
+            614
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "千问提示词优化 · 可选",
+      "properties": {
+        "Node name for S&R": "CodexPromptOptimize",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "",
+        false,
+        "GPT Image 2/2.5",
+        "qwen3.5:9b",
+        "将用户输入整理为目标生图模型能准确执行的提示词，只输出最终提示词。保留主体、身份、数量、动作、表情、衣物覆盖、物体关系、画面左右、环境、构图、光照和明确限制。参考图1、图2、@图1等来源编号必须保持，不互换角色或添加未要求的人物、物件、剧情。用户中文输入默认输出中文，指定要出现在图上的文字逐字保留。去掉重复措辞和不适用于该模型的标签，但不删除关键需求；看不清或未给出的细节不要编造。不要输出分析、标题、解释、对白时间轴、帧率、S编号或视频镜头运动。",
+        1536,
+        8192,
+        0.15,
+        0.9,
+        3
+      ]
+    },
+    {
+      "id": 32,
+      "type": "CodexPromptOptimize",
+      "pos": [
+        1520,
+        1080
+      ],
+      "size": [
+        480,
+        760
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "原始提示词",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "原始提示词"
+          }
+        },
+        {
+          "name": "启用优化",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "启用优化"
+          }
+        },
+        {
+          "name": "目标模型",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "目标模型"
+          }
+        },
+        {
+          "name": "语言模型",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "语言模型"
+          }
+        },
+        {
+          "name": "前置规则",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "前置规则"
+          }
+        },
+        {
+          "name": "输出上限",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "输出上限"
+          }
+        },
+        {
+          "name": "上下文",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "上下文"
+          }
+        },
+        {
+          "name": "温度",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "温度"
+          }
+        },
+        {
+          "name": "top_p",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "top_p"
+          }
+        },
+        {
+          "name": "详细程度",
+          "type": "INT",
+          "shape": 7,
+          "widget": {
+            "name": "详细程度"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "最终生图提示词",
+          "type": "STRING",
+          "links": [
+            615
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "千问提示词优化 · 可选",
+      "properties": {
+        "Node name for S&R": "CodexPromptOptimize",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "",
+        false,
+        "GPT Image 2/2.5",
+        "qwen3.5:9b",
+        "将用户输入整理为目标生图模型能准确执行的提示词，只输出最终提示词。保留主体、身份、数量、动作、表情、衣物覆盖、物体关系、画面左右、环境、构图、光照和明确限制。参考图1、图2、@图1等来源编号必须保持，不互换角色或添加未要求的人物、物件、剧情。用户中文输入默认输出中文，指定要出现在图上的文字逐字保留。去掉重复措辞和不适用于该模型的标签，但不删除关键需求；看不清或未给出的细节不要编造。不要输出分析、标题、解释、对白时间轴、帧率、S编号或视频镜头运动。",
+        1536,
+        8192,
+        0.15,
+        0.9,
+        3
+      ]
+    },
+    {
+      "id": 33,
+      "type": "CodexWorkflowControls",
+      "pos": [
+        -480,
+        661
+      ],
+      "size": [
+        430,
+        260
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "控件映射",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "控件映射"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "分支1控制",
+      "properties": {
+        "Node name for S&R": "CodexWorkflowControls",
+        "codex_optimizer_control_for": 30,
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "{\"fields\": [{\"node\": 30, \"widget\": \"启用优化\", \"label\": \"提示词优化\"}, {\"node\": 30, \"widget\": \"语言模型\", \"label\": \"优化模型\"}, {\"node\": 10, \"widget\": \"输出模式\", \"label\": \"输出模式\"}, {\"node\": 30, \"widget\": \"详细程度\", \"label\": \"详细程度\"}]}"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "CodexWorkflowControls",
+      "pos": [
+        -480,
+        966
+      ],
+      "size": [
+        430,
+        260
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "控件映射",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "控件映射"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "分支2控制",
+      "properties": {
+        "Node name for S&R": "CodexWorkflowControls",
+        "codex_optimizer_control_for": 31,
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "{\"fields\": [{\"node\": 31, \"widget\": \"启用优化\", \"label\": \"提示词优化\"}, {\"node\": 31, \"widget\": \"语言模型\", \"label\": \"优化模型\"}, {\"node\": 11, \"widget\": \"输出模式\", \"label\": \"输出模式\"}, {\"node\": 31, \"widget\": \"详细程度\", \"label\": \"详细程度\"}]}"
+      ]
+    },
+    {
+      "id": 35,
+      "type": "CodexWorkflowControls",
+      "pos": [
+        -480,
+        1271
+      ],
+      "size": [
+        430,
+        260
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "控件映射",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "控件映射"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "分支3控制",
+      "properties": {
+        "Node name for S&R": "CodexWorkflowControls",
+        "codex_optimizer_control_for": 32,
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        "{\"fields\": [{\"node\": 32, \"widget\": \"启用优化\", \"label\": \"提示词优化\"}, {\"node\": 32, \"widget\": \"语言模型\", \"label\": \"优化模型\"}, {\"node\": 12, \"widget\": \"输出模式\", \"label\": \"输出模式\"}, {\"node\": 32, \"widget\": \"详细程度\", \"label\": \"详细程度\"}]}"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "CodexSpeechInput",
+      "title": "语音输入 · SenseVoice",
+      "pos": [
+        -480,
+        1890
+      ],
+      "size": [
+        600,
+        460
+      ],
+      "flags": {},
+      "order": 77,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "启用识别",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "启用识别"
+          }
+        },
+        {
+          "name": "识别文字",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "识别文字"
+          }
+        },
+        {
+          "name": "音频文件",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "音频文件"
+          }
+        },
+        {
+          "name": "识别语言",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "识别语言"
+          }
+        },
+        {
+          "name": "数字规范",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "数字规范"
+          }
+        },
+        {
+          "name": "CPU线程",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "CPU线程"
+          }
+        },
+        {
+          "name": "外接音频",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "运行前卸载模型",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "运行前卸载模型"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "识别文本",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CodexSpeechInput",
+        "bbaigc_author": "BBAIGC",
+        "bbaigc_version": "1.1.5"
+      },
+      "widgets_values": [
+        false,
+        "",
+        "",
+        "自动",
+        true,
+        4,
+        true
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      10,
+      0,
+      "BBAPI_CONNECTION"
+    ],
+    [
+      2,
+      1,
+      0,
+      11,
+      0,
+      "BBAPI_CONNECTION"
+    ],
+    [
+      4,
+      1,
+      0,
+      12,
+      0,
+      "BBAPI_CONNECTION"
+    ],
+    [
+      601,
+      20,
+      0,
+      11,
+      1,
+      "BBAPI_REFERENCES"
+    ],
+    [
+      602,
+      20,
+      0,
+      12,
+      1,
+      "BBAPI_REFERENCES"
+    ],
+    [
+      603,
+      20,
+      0,
+      21,
+      0,
+      "BBAPI_REFERENCES"
+    ],
+    [
+      604,
+      21,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      605,
+      11,
+      2,
+      22,
+      1,
+      "IMAGE"
+    ],
+    [
+      606,
+      1,
+      0,
+      23,
+      0,
+      "BBAPI_CONNECTION"
+    ],
+    [
+      607,
+      10,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      608,
+      11,
+      0,
+      25,
+      1,
+      "IMAGE"
+    ],
+    [
+      609,
+      12,
+      0,
+      25,
+      2,
+      "IMAGE"
+    ],
+    [
+      610,
+      25,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      611,
+      26,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      612,
+      27,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      613,
+      30,
+      0,
+      10,
+      2,
+      "STRING"
+    ],
+    [
+      614,
+      31,
+      0,
+      11,
+      4,
+      "STRING"
+    ],
+    [
+      615,
+      32,
+      0,
+      12,
+      4,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "连接与参考图",
+      "bounding": [
+        -20,
+        -35,
+        380,
+        1800
+      ],
+      "color": "#365f77",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "文生图",
+      "bounding": [
+        380,
+        -35,
+        520,
+        1000
+      ],
+      "color": "#365f77",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "图生图",
+      "bounding": [
+        940,
+        -35,
+        520,
+        1000
+      ],
+      "color": "#3f6c68",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "多图参考",
+      "bounding": [
+        1500,
+        -35,
+        520,
+        1000
+      ],
+      "color": "#664c79",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "可选后处理",
+      "bounding": [
+        2090,
+        -35,
+        1580,
+        950
+      ],
+      "color": "#3f6c68",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "统一控制",
+      "bounding": [
+        -500,
+        -20,
+        470,
+        1566
+      ],
+      "color": "#365f77",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "workflowVersion": "1.1.5",
+    "frontendVersion": "1.57.4",
+    "ds": {
+      "scale": 0.6,
+      "offset": [
+        500,
+        60
+      ]
+    },
+    "codex_version": "1.1.0",
+    "codex_io_revision": 2,
+    "bbaigc_author": "BBAIGC",
+    "bbaigc_product": "bbapi",
+    "bbaigc_version": "1.1.5",
+    "bbaigc_public": true
+  },
+  "version": 0.4
+}
