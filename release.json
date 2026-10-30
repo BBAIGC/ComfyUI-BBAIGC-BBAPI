@@ -1,12 +1,12 @@
 {
   "id": "bbapi",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "author": "BBAIGC",
-  "workflow": "workflows/BBAIGC_bbapi_V1.1.5.json",
-  "sha256": "9211d81517b460afa4f7278a2b508442b05dcfdfaabea8eb9e55eaf4cdd27e9b",
+  "workflow": "workflows/BBAIGC_bbapi_V1.1.6.json",
+  "sha256": "33329d2d933ece828b5bd2f7ff9c574a0459618332a5f6ed0e6ff1b97a936f53",
   "node_versions": {
-    "core": "1.2.11",
+    "core": "1.2.12",
     "bbapi": "1.1.4"
   },
-  "notes": "更新共享节点至V1.2.9，修正作者标签遮挡并同步公共控件兼容性；BBAPI节点保持V1.1.4。"
+  "notes": "同步共享核心V1.2.12，保留BBAPI接口与图片生成路线；BBAPI节点仍为V1.1.4。"
 }
