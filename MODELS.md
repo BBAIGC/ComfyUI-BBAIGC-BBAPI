@@ -13,7 +13,7 @@ BBAPI 的文生图、图生图、多图参考通过用户自行配置的接口�
 | 共用提示词/输出/修复节点 | [BBAIGC/ComfyUI-BBAIGC-MiniMax-H3](https://github.com/BBAIGC/ComfyUI-BBAIGC-MiniMax-H3)，基础 API 生图不需要下载 H3 视频模型 |
 | 分组开关与对比 | [rgthree/rgthree-comfy](https://github.com/rgthree/rgthree-comfy) |
 
-密钥在本机连接节点的密码框中填写并保存，工作流 JSON 不包含密钥。Windows 使用当前用户 DPAPI 加密；换电脑或换 Windows 用户后需重新填写。公开包不含配置文件、API Key、账号、生成记录或私人参考图。基础密钥持久化以 Windows 为已验证平台；其他系统先核对节点当前安全存储支持，不能宣称跨平台安全存储已验证。
+密钥在本机连接节点的密码框中填写并保存，工作流 JSON 不包含密钥。Windows 使用当前用户 DPAPI 加密；换电脑或换 Windows 用户后需重新填写。基础密钥持久化以 Windows 为已验证平台；其他系统先核对节点当前安全存储支持，不能宣称跨平台安全存储已验证。
 
 ## 可选本地能力
 
