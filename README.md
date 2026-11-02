@@ -110,7 +110,7 @@ git clone https://github.com/BBAIGC/ComfyUI-BBAIGC-BBAPI
 
 ## 更新
 
-版本、更新入口与发布下载见 [release.json](release.json)。更新前保留自己的工作流 JSON；节点代码与公开工作流更新不应覆盖本机密钥配置。
+版本与下载见 [release.json](release.json)。更新前请备份自定义工作流。
 
 ## 联系与支持
 
