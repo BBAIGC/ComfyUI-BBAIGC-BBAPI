@@ -71,8 +71,11 @@ async def list_models(request):
     try:
         data = await _payload(request)
         connection = make_connection(str(data.get("profile", "")), str(data.get("base_url", "")))
-        models = await asyncio.to_thread(ImageClient(connection).models)
-        return web.json_response({"models": models})
+        kind = str(data.get("kind", "image"))
+        if kind not in ("image", "text", "all"):
+            raise ValueError("模型类别无效。")
+        models = await asyncio.to_thread(ImageClient(connection).models, kind)
+        return web.json_response({"models": models, "kind": kind})
     except web.HTTPException:
         raise
     except Exception as error:

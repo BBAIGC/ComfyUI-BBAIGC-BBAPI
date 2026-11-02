@@ -88,7 +88,7 @@
           "input_ue_unconnectable": {}
         },
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "default",
@@ -182,7 +182,7 @@
           "input_ue_unconnectable": {}
         },
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "[]"
@@ -341,7 +341,7 @@
           "input_ue_unconnectable": {}
         },
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "",
@@ -528,7 +528,7 @@
           "input_ue_unconnectable": {}
         },
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "",
@@ -713,7 +713,7 @@
           "input_ue_unconnectable": {}
         },
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "",
@@ -771,7 +771,7 @@
       "properties": {
         "Node name for S&R": "BBAPIReferenceInputs",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         1
@@ -810,7 +810,7 @@
       "properties": {
         "Node name for S&R": "BBAPIReferenceSelect",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         1
@@ -913,7 +913,7 @@
       "properties": {
         "Node name for S&R": "BBAPIFolderBatch",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "自动（2.5优先）",
@@ -1087,7 +1087,7 @@
       "properties": {
         "Node name for S&R": "CodexImageRepair",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         false,
@@ -1269,7 +1269,7 @@
       "properties": {
         "Node name for S&R": "CodexImageUpscale",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "关闭",
@@ -1346,7 +1346,7 @@
       "properties": {
         "Node name for S&R": "CodexImageOutput",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "保存并预览",
@@ -1389,7 +1389,7 @@
       "properties": {
         "Node name for S&R": "CodexWorkflowControls",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "{\"fields\": [{\"node\": 26, \"widget\": \"启用修复\", \"label\": \"启用修复\"}, {\"node\": 27, \"widget\": \"超分路线\", \"label\": \"超分路线\"}, {\"node\": 27, \"widget\": \"总倍率\", \"label\": \"总倍率\"}, {\"node\": 26, \"widget\": \"种子\", \"label\": \"修复种子\"}, {\"node\": 26, \"widget\": \"目标宽度\", \"label\": \"修复宽度\"}, {\"node\": 26, \"widget\": \"目标高度\", \"label\": \"修复高度\"}, {\"node\": 27, \"widget\": \"DLSS倍率\", \"label\": \"DLSS倍率\"}, {\"node\": 27, \"widget\": \"VOSR倍率\", \"label\": \"VOSR倍率\"}, {\"node\": 27, \"widget\": \"色彩校正\", \"label\": \"色彩校正\"}, {\"node\": 27, \"widget\": \"图像分块\", \"label\": \"图像分块\"}, {\"node\": 27, \"widget\": \"分块重叠\", \"label\": \"分块重叠\"}, {\"node\": 27, \"widget\": \"VAE分块\", \"label\": \"VAE分块\"}, {\"node\": 27, \"widget\": \"VAE重叠\", \"label\": \"VAE重叠\"}, {\"node\": 27, \"widget\": \"DLSS强度\", \"label\": \"DLSS强度\"}, {\"node\": 27, \"widget\": \"DLSS结构\", \"label\": \"DLSS结构\"}, {\"node\": 27, \"widget\": \"DLSS色彩\", \"label\": \"DLSS色彩\"}]}"
@@ -1506,7 +1506,7 @@
       "properties": {
         "Node name for S&R": "CodexPromptOptimize",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "",
@@ -1632,7 +1632,7 @@
       "properties": {
         "Node name for S&R": "CodexPromptOptimize",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "",
@@ -1758,7 +1758,7 @@
       "properties": {
         "Node name for S&R": "CodexPromptOptimize",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "",
@@ -1810,7 +1810,7 @@
         "Node name for S&R": "CodexWorkflowControls",
         "codex_optimizer_control_for": 30,
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "{\"fields\": [{\"node\": 30, \"widget\": \"启用优化\", \"label\": \"提示词优化\"}, {\"node\": 30, \"widget\": \"语言模型\", \"label\": \"优化模型\"}, {\"node\": 10, \"widget\": \"输出模式\", \"label\": \"输出模式\"}, {\"node\": 30, \"widget\": \"详细程度\", \"label\": \"详细程度\"}]}"
@@ -1853,7 +1853,7 @@
         "Node name for S&R": "CodexWorkflowControls",
         "codex_optimizer_control_for": 31,
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "{\"fields\": [{\"node\": 31, \"widget\": \"启用优化\", \"label\": \"提示词优化\"}, {\"node\": 31, \"widget\": \"语言模型\", \"label\": \"优化模型\"}, {\"node\": 11, \"widget\": \"输出模式\", \"label\": \"输出模式\"}, {\"node\": 31, \"widget\": \"详细程度\", \"label\": \"详细程度\"}]}"
@@ -1896,7 +1896,7 @@
         "Node name for S&R": "CodexWorkflowControls",
         "codex_optimizer_control_for": 32,
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         "{\"fields\": [{\"node\": 32, \"widget\": \"启用优化\", \"label\": \"提示词优化\"}, {\"node\": 32, \"widget\": \"语言模型\", \"label\": \"优化模型\"}, {\"node\": 12, \"widget\": \"输出模式\", \"label\": \"输出模式\"}, {\"node\": 32, \"widget\": \"详细程度\", \"label\": \"详细程度\"}]}"
@@ -1991,7 +1991,7 @@
       "properties": {
         "Node name for S&R": "CodexSpeechInput",
         "bbaigc_author": "BBAIGC",
-        "bbaigc_version": "1.1.7"
+        "bbaigc_version": "1.1.8"
       },
       "widgets_values": [
         false,
@@ -2226,7 +2226,7 @@
   ],
   "config": {},
   "extra": {
-    "workflowVersion": "1.1.7",
+    "workflowVersion": "1.1.8",
     "frontendVersion": "1.57.4",
     "ds": {
       "scale": 0.6,
@@ -2239,7 +2239,7 @@
     "codex_io_revision": 2,
     "bbaigc_author": "BBAIGC",
     "bbaigc_product": "bbapi",
-    "bbaigc_version": "1.1.7",
+    "bbaigc_version": "1.1.8",
     "bbaigc_public": true
   },
   "version": 0.4

@@ -210,7 +210,7 @@ class ImageClient:
         self.connection = connection
         self.session_factory = session_factory
 
-    def models(self) -> list[dict]:
+    def models(self, kind: str = "image") -> list[dict]:
         connection = self.connection
         with self.session_factory() as session:
             with session.get(
@@ -229,8 +229,14 @@ class ImageClient:
         except (ValueError, TypeError) as error:
             raise ImageRequestError("模型接口未返回有效 JSON。") from error
         candidates = payload.get("data", [])
-        return [item for item in candidates if isinstance(item, dict) and
-                re.search(r"image|imagen|flux|dall.?e|banana|grok-imagine", item.get("id", ""), re.I)]
+        entries = [item for item in candidates if isinstance(item, dict) and isinstance(item.get("id"), str)]
+        if kind == "all":
+            return entries
+        if kind == "text":
+            return [item for item in entries if not re.search(
+                r"image|imagen|flux|dall.?e|banana|grok-imagine|embedding|audio|transcri|video|tts", item["id"], re.I)]
+        return [item for item in entries if re.search(
+            r"image|imagen|flux|dall.?e|banana|grok-imagine", item["id"], re.I)]
 
     def generate_one(self, index: int, model: str, prompt: str, resolution: str, ratio: str,
                      quality: str, references: list[bytes], cancelled: Callable[[], bool],

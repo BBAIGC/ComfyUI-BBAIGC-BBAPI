@@ -145,10 +145,13 @@ def install_workflow(payload, target_dir, identity, version):
     target_dir.mkdir(parents=True, exist_ok=True)
     target = target_dir / f'{identity}.json'
     if target.exists() and target.read_bytes() != payload:
-        target = target_dir / f'{identity}-V{version}.json'
-        if target.exists() and target.read_bytes() != payload:
-            target = target_dir / f'{identity}-V{version}-{time.time_ns()}.json'
-    if not target.exists():
+        # This is the installer-owned entry; preserve any edits before updating
+        # the stable filename. User-created workflows elsewhere are untouched.
+        backup_dir = target_dir.parent.parent / 'bbaigc' / 'workflow-backups'
+        backup = backup_dir / f'{identity}-{time.time_ns()}.json'
+        atomic_write(backup, target.read_bytes())
+        print('原入口已备份：', backup)
+    if not target.exists() or target.read_bytes() != payload:
         atomic_write(target, payload)
     return target
 

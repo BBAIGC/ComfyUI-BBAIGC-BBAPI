@@ -1,12 +1,12 @@
 {
   "id": "bbapi",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "author": "BBAIGC",
-  "workflow": "workflows/BBAIGC_bbapi_V1.1.7.json",
-  "sha256": "01c317182544deea0c2712a414da2ef0e2d31c14c33f682d66e782b967ea60d6",
+  "workflow": "workflows/BBAIGC_bbapi.json",
+  "sha256": "81ed41483fb0ec962961504e740aa00c3c21bc41e2db9c01d26d33109201ea94",
   "node_versions": {
-    "core": "1.2.25",
-    "bbapi": "1.1.5"
+    "core": "1.3.0",
+    "bbapi": "1.1.6"
   },
-  "notes": "同步共享核心V1.2.25与BBAPI节点V1.1.5，补齐Nodes 2.0输出控件及面板高度兼容；密钥仍仅本机加密保存。"
+  "notes": "共享核心1.3.0；BBAPI节点1.1.6按图像/文字类别读取当前分组模型，密钥仍仅保存在本机。"
 }

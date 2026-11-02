@@ -4,7 +4,7 @@
 
 ### 云端生图与多图编辑，批量任务集中完成
 
-![版本](https://img.shields.io/badge/版本-V1.1.7-1677ff?style=flat-square)
+![版本](https://img.shields.io/badge/版本-V1.1.8-1677ff?style=flat-square)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-API_生图-18181b?style=flat-square)
 ![BBAPI](https://img.shields.io/badge/BBAPI-多模型接口-7c3aed?style=flat-square)
 ![Batch](https://img.shields.io/badge/批量-有界并发-16a34a?style=flat-square)
@@ -17,6 +17,8 @@
 
 > [!TIP]
 > **基础云端生图无需下载本地图像大模型，也不要求 NVIDIA 显卡。** 普通电脑可通过自己的接口密钥使用云端图像模型，本地提示词优化、修复和超分按需增加。
+
+本次更新共享核心至 1.3.0、BBAPI 节点至 1.1.6，模型列表按文本和图片类别读取；密钥仍仅保存本机，发布模板使用固定文件名。
 
 ## 最值得用它的四个理由
 
